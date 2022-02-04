@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>A Cifra de César</title>
+</head>
+<body>
+    <div>
+        <section class="hero is-dark is-medium">
+            <div class="hero-head">
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="navbar-brand">
+                           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" id="burguer">
+                                <span aria-hidden="true"></span>
+                                <span aria-hidden="true"></span>
+                                <span aria-hidden="true"></span>
+                              </a>
+                        </div>
+                        <div class="navbar-menu" id="nav-links">
+                            <div class="navbar-end">
+                                <a href="#" class="navbar-item">Início</a>
+                                <a href="#sobre" class="navbar-item">Sobre</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        <section class="hero is-primary is-bold pb-6">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title is-1">Cifra de César</h1>
+                    <h5 class="subtitle">Crie mensagens codificadas e compartilhe com seus amigos!</h5>
+                </div>
+            </div>
+            <div class="container">
+                <div class="columns">
+                    <div class="column">
+                        <div class="field">
+                            <label class="label">Insira seu texto aqui</label>
+                            <div class="control">
+                                <textarea class="textarea is-info is-focused has-fixed-size" id="textAreaOne" placeholder="Digite o texto" rows="5"></textarea>
+                            </div>
+                            <p class="help">Número máximo de linhas: 5</p>
+                        </div>
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-link" id="encode">
+                                    Criptografar
+                                  </button>
+                            </div>
+                            <div class="control">
+                                <button class="button is-link is-light" id="decode">
+                                    Decifrar
+                                  </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="field">
+                            <label class="label">Resultado</label>
+                            <div class="control">
+                                <textarea class="textarea is-info size has-fixed-size" id="textAreaTwo" rows="5" readonly></textarea>
+                                <p id="texto"></p>
+                            </div>
+                        </div>
+                        <div class="field is-grouped pt-5">
+                            <div class="control">
+                                <button class="button is-link" id="copy" onclick="onCopy()">
+                                    Copiar
+                                  </button>
+                            </div>
+                            <div class="control">
+                                <button class="button is-link" id="download" onclick="download()">
+                                    Download
+                                  </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <p id="util"></p>
+        </section>
+        <section class="hero mt-6 mb-6">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h2 class="title is-3" >Sobre</h2>
+                    <h4 class="subtitle is-5">Conheça sobre o algoritmo da Cifra de César</h4>
+                </div>
+            </div>
+            <div class="container has-text-centered mr-3 ml-3">
+                    <label>
+                        <p>Em criptografia, uma cifra de César , também conhecida como a cifra de deslocamento , código de César ou deslocamento de César , é uma das técnicas de criptografia mais simples e 
+                            conhecidas, substituindo por uma letra em um número fixo de posições no alfabeto.</p>
+                        <p>Por exemplo, com um deslocamento à esquerda de 3, D seria substituído por A, E se tornaria B, e assim por diante. 
+                            O método recebeu o nome de Júlio César, que o usava em suas correspondências privadas.</p>    
+                        <p id="sobre">Seu desenvolvimento é estritamente educacional, para fixar os conhecimentos.
+                            Conheça mais sobre <a href="#" target="_blank">A Cifra de César</a>. Referência: Wikipédia.
+                        </p>    
+                       
+                    </label>
+            </div>
+        </section>
+        <section class="hero">
+            <footer class="footer pb-4">
+                <div class="content has-text-centered">
+                    <p>
+                        <strong>A Cifra de César</strong> by <a href="https://github.com/jotasouza" target="_blank" rel="noopener noreferrer">Jonatas Souza</a> since 2022.
+                        O código fonte é licenciado <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>
+                    </p>
+                </div>
+            </footer>
+        </section>
+    </div>
+    
+    
+
+   
+    
+    <script src="./assets/js/cifraDeCesar.js"></script>
+</body>
+</html>
